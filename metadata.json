@@ -1,0 +1,6 @@
+{
+  "name": "DEITY CAPS - Streetwear & Premium Caps",
+  "description": "Modern Gen Z streetwear cap brand and manufacturing e-commerce platform offering snapbacks, trucker caps, dad caps, and custom headwear.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
