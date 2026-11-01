@@ -1,0 +1,32 @@
+name: Deity Caps CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install Frontend Dependencies
+        run: bun install
+
+      - name: Build Frontend
+        run: bun run build
+
+      - name: Install Backend Dependencies
+        working-directory: server
+        run: bun install
+
+      - name: Check Backend
+        working-directory: server
+        run: bun run build
